@@ -3,11 +3,11 @@ import linkedin from "@/app/assets/icons/linkedin.svg";
 import github from "@/app/assets/icons/github.svg";
 import instagram from "@/app/assets/icons/instagram.svg";
 import email from "@/app/assets/icons/email.svg";
-import js from "@/app/assets/imgs/js.png";
 import Header from "@/app/components/Header";
 import Logo from "@/app/components/Logo";
 import Introduce from "@/app/components/Introduce";
 import Experience from "@/app/components/Experience";
+import Blog from "@/app/components/Blog";
 
 export default function Home() {
   return (
@@ -22,42 +22,7 @@ export default function Home() {
           simplemente el texto.
         </p>
         <Experience/>
-        <div className="my-8 flex flex-col justify-center items-start gap-4">
-          <section className="flex justify-between items-center w-full gap-2">
-          <h2 className="text-xl font-semibold">Últimos posts</h2>
-          <a href="/posts" className="text-sm font-light underline underline-offset-4 hover:text-main">Ver todos</a>
-          </section>
-          <div className="flex justify-start items-center gap-4 w-full p-4 bg-black-light rounded-2xl border-2 border-black-default hover:border-main">
-            <Image className="w-12 object-cover rounded-xl" src={js} alt={""} />
-            <section className="flex flex-col justify-center items-start gap-1 w-full">
-              <h3 className="font-semibold">¿Qué es el scope en Javascript?</h3>
-              <div className="flex justify-between items-center gap-2 flex-wrap w-full text-xs">
-                <p className="">3 minutos de lectura</p>
-                <p className="self-end">dom, 22 may 2022</p>
-              </div>
-            </section>
-          </div>
-          <div className="flex justify-start items-center gap-4 w-full p-4 bg-black-light rounded-2xl border-2 border-black-default hover:border-main">
-            <Image className="w-12 object-cover rounded-xl" src={js} alt={""} />
-            <section className="flex flex-col justify-center items-start gap-1 w-full">
-              <h3 className="font-semibold">¿Qué es el scope en Javascript?</h3>
-              <div className="flex justify-between items-center gap-2 flex-wrap w-full text-xs">
-                <p className="">3 minutos de lectura</p>
-                <p className="self-end">dom, 22 may 2022</p>
-              </div>
-            </section>
-          </div>
-          <div className="flex justify-start items-center gap-4 w-full p-4 bg-black-light rounded-2xl border-2 border-black-default hover:border-main">
-            <Image className="w-12 object-cover rounded-xl" src={js} alt={""} />
-            <section className="flex flex-col justify-center items-start gap-1 w-full">
-              <h3 className="font-semibold">¿Qué es el scope en Javascript?</h3>
-              <div className="flex justify-between items-center gap-2 flex-wrap w-full text-xs">
-                <p className="">3 minutos de lectura</p>
-                <p className="self-end">dom, 22 may 2022</p>
-              </div>
-            </section>
-          </div>
-        </div>
+        <Blog/>
         <section className="my-8 flex flex-col justify-center items-start gap-4">
           <h2 className="mb-4 text-xl font-semibold">Contacto</h2>
           <a href="https://linkedin.com/in/jesusmarzor" target="_blank" className="flex justify-start items-center gap-4 w-full p-4 bg-black-light rounded-2xl border-2 border-black-default hover:border-main">
