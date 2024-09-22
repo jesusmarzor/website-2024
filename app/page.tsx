@@ -7,6 +7,7 @@ import js from "@/app/assets/imgs/js.png";
 import Header from "@/app/components/Header";
 import Logo from "@/app/components/Logo";
 import Introduce from "@/app/components/Introduce";
+import Experience from "@/app/components/Experience";
 
 export default function Home() {
   return (
@@ -20,73 +21,7 @@ export default function Home() {
           las industrias desde el año 1500, cuando un impresor Lorem Ipsum es
           simplemente el texto.
         </p>
-        <section className="my-8">
-          <h2 className="mb-4 text-xl font-semibold">Experiencia</h2>
-          <div className="relative border-l-2 pl-10 mx-1">
-            <section className="flex flex-col justify-center items-start gap-1">
-              <span className="-left-[11.2px] top-0 absolute rounded-full text-5xl">
-                •
-              </span>
-              <h2 className="text-xl font-bold mt-[.8rem] text-main">
-                iOS app developer
-              </h2>
-              <p className="font-semibold text-xs">
-                Sept 2022 - Actualidad | Deloitte, Madrid
-              </p>
-              <section className="flex flex-col justify-center items-start gap-1 ml-4">
-                <h2 className="text-md font-bold text-main mt-3">
-                  Mid software developer
-                </h2>
-                <p className="font-semibold text-xs">
-                  Sept 2024 - Actualidad
-                </p>
-                <ul className="ml-8">
-                  <li className="list-disc">
-                    Lorem Ipsum es simplemente el texto de relleno de las imprentas.
-                  </li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                </ul>
-              </section>
-              <section className="flex flex-col justify-center items-start gap-1 ml-4">
-                <h2 className="text-md font-bold text-main mt-[.8rem]">
-                  Junior software developer
-                </h2>
-                <p className="font-semibold text-xs">
-                  Sept 2022 - Ag 2024
-                </p>
-                <ul className="ml-8">
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                </ul>
-              </section>
-            </section>
-          </div>
-          <div className="relative border-l-2 pl-10 mx-1">
-            <section className="flex flex-col justify-center items-start gap-1">
-              <span className="-left-[11.2px] top-0 absolute rounded-full text-5xl">
-                •
-              </span>
-              <h2 className="text-xl font-bold  mt-[0.8rem] text-main">Fontend web developer</h2>
-              <p className="font-semibold text-xs">
-                Feb 2022 - Ag 2022 | Secrets-On, Madrid
-              </p>
-              <ul className="ml-8">
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                <li className="list-disc">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas.:
-                  <ul className="ml-8">
-                    <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                    <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                    <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  </ul>
-                </li>
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-              </ul>
-            </section>
-          </div>
-        </section>
+        <Experience/>
         <div className="my-8 flex flex-col justify-center items-start gap-4">
           <section className="flex justify-between items-center w-full gap-2">
           <h2 className="text-xl font-semibold">Últimos posts</h2>
