@@ -6,17 +6,13 @@ import github from "@/app/assets/icons/github.svg";
 import instagram from "@/app/assets/icons/instagram.svg";
 import email from "@/app/assets/icons/email.svg";
 import js from "@/app/assets/imgs/js.png";
+import Header from "./components/Header";
+import { textLogo } from "@/app/utils/constants"
 
 export default function Home() {
   return (
     <>
-      <header className="w-full bg-black-light flex justify-start items-center py-4 px-10">
-        <h1 className="">
-          <Link href="/" rel="preload" className="text-xl">
-            <span className="font-semibold">Jesus</span>marzor
-          </Link>
-        </h1>
-      </header>
+      <Header/>
       <div className="max-w-[560px] mx-auto py-8 px-6">
         <header className="flex justify-start items-center gap-4 my-8">
           <picture className="flex justify-center items-center w-28 h-28 border-4 border-main rounded-full overflow-hidden">
@@ -203,11 +199,11 @@ export default function Home() {
         </section>
       </div>
       <footer className="w-full bg-black-light flex flex-col gap-4 justify-center items-center py-4 px-10">
-        <h1 className="">
+        <h2 className="">
           <Link href="/" rel="preload" className="text-xl">
-            <span className="font-semibold">Jesus</span>marzor
+            <span className="font-semibold">{textLogo.name}</span>{textLogo.lastName}
           </Link>
-        </h1>
+        </h2>
         <p className="text-sm">Inspirado en el proyecto de <a className="text-main" href="https://moure.dev" target="_blank">@mouredev</a></p>
       </footer>
     </>
