@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import profile from "@/app/assets/imgs/profile.webp";
 import linkedin from "@/app/assets/icons/linkedin.svg";
 import github from "@/app/assets/icons/github.svg";
 import instagram from "@/app/assets/icons/instagram.svg";
 import email from "@/app/assets/icons/email.svg";
 import js from "@/app/assets/imgs/js.png";
-import Header from "./components/Header";
-import { textLogo } from "@/app/utils/constants"
+import Header from "@/app/components/Header";
+import Logo from "@/app/components/Logo";
 
 export default function Home() {
   return (
@@ -199,11 +198,7 @@ export default function Home() {
         </section>
       </div>
       <footer className="w-full bg-black-light flex flex-col gap-4 justify-center items-center py-4 px-10">
-        <h2 className="">
-          <Link href="/" rel="preload" className="text-xl">
-            <span className="font-semibold">{textLogo.name}</span>{textLogo.lastName}
-          </Link>
-        </h2>
+        <Logo/>
         <p className="text-sm">Inspirado en el proyecto de <a className="text-main" href="https://moure.dev" target="_blank">@mouredev</a></p>
       </footer>
     </>
