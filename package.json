@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
     "next": "14.2.11",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20.16.5",
     "@types/react": "^18.3.8",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.11",
     "postcss": "^8.4.47",

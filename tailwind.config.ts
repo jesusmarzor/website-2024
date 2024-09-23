@@ -20,10 +20,23 @@ const config: Config = {
       },
       main: "var(--main)",
       white: {
+        50: "#ffffff80",
         default: "var(--white)"
       }
     },
+    extend: {
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-pre-bg': "#282c34",
+            '--tw-prose-invert-pre-bg': "#282c34"
+          },
+        },
+      }),
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 };
 export default config;
