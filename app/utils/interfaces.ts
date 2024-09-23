@@ -4,6 +4,7 @@ export interface Post {
     title: string
     date: string
     tags: string[]
+    icon?: string
     image: string
     markdown: string
     lang: string
