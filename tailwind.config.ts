@@ -12,6 +12,7 @@ const config: Config = {
         default: "var(--light-default)"
       },
       black: {
+        80: "#23272bf7",
         default: "var(--black-default)",
         extra: {
           light: "var(--black-extra-light)"
