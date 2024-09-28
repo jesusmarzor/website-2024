@@ -1,9 +1,6 @@
 import Image from "next/image"
 import profile from "@/app/assets/imgs/profile.webp";
-import linkedin from "@/app/assets/icons/linkedin.svg";
-import github from "@/app/assets/icons/github.svg";
-import instagram from "@/app/assets/icons/instagram.svg";
-import email from "@/app/assets/icons/email.svg";
+import { contactOptions } from "../utils/constants";
 
 const Introduce = () => {
     return (
@@ -19,26 +16,15 @@ const Introduce = () => {
             <h2 className="text-2xl">Jesús Martín</h2>
             <p className=" text-main">@jesusmarzor</p>
             <ul className="flex justify-center items-center gap-8 mt-2">
-              <li>
-                <a href="https://linkedin.com/in/jesusmarzor" target="_blank">
-                  <Image className="w-6 h-6" src={linkedin} alt={""} />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/jesusmarzor" target="_blank">
-                  <Image className="w-6 h-6" src={github} alt={""} />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/jesusmarzor" target="_blank">
-                  <Image className="w-6 h-6" src={instagram} alt={""} />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:contacto@jesusmarzor.pro" target="_blank">
-                  <Image className="w-6 h-6" src={email} alt={""} />
-                </a>
-              </li>
+              {
+                contactOptions.map( ({url, img, name}) => (
+                  <li key={name}>
+                    <a href={url} target="_blank">
+                      <Image width={24} height={24} src={img} alt={`${name} icon`} />
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </section>
         </header>
