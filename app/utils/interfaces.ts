@@ -10,3 +10,10 @@ export interface Post {
     lang: string
     readingTime: number
 }
+
+export interface ContactOption {
+    url: string
+    img: string
+    name: string
+    description: string
+}

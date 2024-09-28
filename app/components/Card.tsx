@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { PostsConsumer } from "@/app/contexts/PostsContext";
 import { maxNumCardsInHomeSections } from "@/app/utils/constants";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import CustomLink from "./CustomLink";
+import { CustomLinkType } from "../utils/enums";
 
 interface MousePosition {
   x?: number;
@@ -41,13 +42,14 @@ function getRelativeCoordinates(
 }
 
 interface props {
+    url?: string
     icon?: string
     title: string
     subtitle: string
     rightText?: string
 }
 
-const Card: React.FC<props> = ({icon = null, title, subtitle, rightText = null}) => {
+const Card: React.FC<props> = ({url = null, icon = null, title, subtitle, rightText = null}) => {
     const [showGradient, setShowGradient] = useState(false);
     const [mousePosition, setMousePosition] = useState<MousePosition>({});
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -94,9 +96,9 @@ const Card: React.FC<props> = ({icon = null, title, subtitle, rightText = null})
               opacity: showGradient ? 1 : 0,
             }}
           />
-          <Link
-            href={`/blog/${post?.slug}`}
-            className="z-2 overflow-hidden flex justify-start items-center gap-4 w-full relative bg-black-80 rounded-2xl p-4 select-none leading-6"
+          <CustomLink
+            type={url ? CustomLinkType.a : CustomLinkType.link}
+            href={url ? url : `/blog/${post?.slug}`}
           >
             <Image
               className="object-cover rounded-xl"
@@ -115,7 +117,7 @@ const Card: React.FC<props> = ({icon = null, title, subtitle, rightText = null})
                 }
               </div>
             </section>
-          </Link>
+          </CustomLink>
         </div>
       </motion.div>
     );
