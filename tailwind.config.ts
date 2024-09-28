@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'myFont': ['Nunito', 'ui-sans-serif', 'system-ui']
+    },
     colors: {
       light: {
         default: "var(--light-default)"
