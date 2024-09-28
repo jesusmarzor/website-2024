@@ -11,21 +11,21 @@ const Experience = () => {
             subtitle="Sept 2022 - Actualidad | Deloitte, Madrid"
           >
             <section className="flex flex-col justify-center items-start gap-1 ml-4">
-              <h2 className="text-md font-bold text-main mt-3">
+              <h2 className="font-bold text-main mt-3">
                 Mid software developer
               </h2>
-              <p className="font-semibold text-xs">
+              <p className="font-semibold text-sm">
                 Sept 2024 - Actualidad
               </p>
             </section>
             <section className="flex flex-col justify-center items-start gap-1 ml-4">
-              <h2 className="text-md font-bold text-main mt-[.8rem]">
+              <h2 className="font-bold text-main mt-[.8rem]">
                 Junior software developer
               </h2>
-              <p className="font-semibold text-xs">
+              <p className="font-semibold text-sm">
                 Sept 2022 - Ag 2024
               </p>
-              <ul className="ml-8">
+              <ul className="ml-8 mt-2">
                 <li className="list-disc">Desarrollo en UIKit y Swift UI con arquitectura VIPER.</li>
                 <li className="list-disc">Test unitarios con XCTest.</li>
                 <li className="list-disc">Estimación y reparto de tareas con metodología SCRUM.</li>
@@ -37,7 +37,7 @@ const Experience = () => {
             title="Fontend web developer"
             subtitle="Feb 2022 - Ag 2022 | Secrets-On, Madrid"
           >
-            <ul className="ml-8">
+            <ul className="ml-8 mt-2">
               <li className="list-disc">Desarrollo de una plataforma online con React.</li>
               <li className="list-disc">
                 Recomendaciones que aporté:

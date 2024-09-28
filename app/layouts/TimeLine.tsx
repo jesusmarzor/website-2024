@@ -15,7 +15,7 @@ export const TimeLineLayout: FC<props> = ({title, subtitle, children}) => {
               <h2 className="text-xl font-bold mt-[.8rem] text-main">
                 {title}
               </h2>
-              <p className="font-semibold text-xs">
+              <p className="font-semibold text-sm">
                 {subtitle}
               </p>
               {children}
