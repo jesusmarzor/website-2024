@@ -11,11 +11,10 @@ type Props = {
  
 export async function generateMetadata ({ params, }: Props, ): Promise<Metadata> {
   const slug = params.slug
-  const languagesCode = ["es", "en"]
   const { data } = await supabase
   .from('Posts')
   .select()
-  .eq("lang", languagesCode[1])
+  .eq("lang", "en")
   .eq("slug", slug)
   const post = (data as PostInterface[])[0]
   return {

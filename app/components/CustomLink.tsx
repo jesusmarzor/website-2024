@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { CustomLinkType } from "../utils/enums"
+import { CustomLinkType } from "@/app/utils/enums"
 import Link from "next/link"
 
 interface props {

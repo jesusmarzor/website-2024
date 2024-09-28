@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { PostsConsumer } from "@/app/contexts/PostsContext";
-import { maxNumCardsInHomeSections } from "@/app/utils/constants";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import CustomLink from "./CustomLink";
-import { CustomLinkType } from "../utils/enums";
+import CustomLink from "@/app/components/CustomLink";
+import { CustomLinkType } from "@/app/utils/enums";
 
 interface MousePosition {
   x?: number;
@@ -42,18 +40,18 @@ function getRelativeCoordinates(
 }
 
 interface props {
-    url?: string
+    type: CustomLinkType
+    href: string
     icon?: string
     title: string
     subtitle: string
     rightText?: string
 }
 
-const Card: React.FC<props> = ({url = null, icon = null, title, subtitle, rightText = null}) => {
+const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightText = null}) => {
     const [showGradient, setShowGradient] = useState(false);
     const [mousePosition, setMousePosition] = useState<MousePosition>({});
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const post = PostsConsumer()?.slice(0, maxNumCardsInHomeSections)![0];
   
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
       if (containerRef.current) {
@@ -97,8 +95,8 @@ const Card: React.FC<props> = ({url = null, icon = null, title, subtitle, rightT
             }}
           />
           <CustomLink
-            type={url ? CustomLinkType.a : CustomLinkType.link}
-            href={url ? url : `/blog/${post?.slug}`}
+            type={type}
+            href={href}
           >
             <Image
               className="object-cover rounded-xl"

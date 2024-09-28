@@ -2,9 +2,9 @@
 import Introduce from "@/app/components/Introduce";
 import Experience from "@/app/components/Experience";
 import Blog from "@/app/components/Blog";
-import { PostsConsumer } from "./contexts/PostsContext";
-import MainLayout from "./layouts/MainLayout";
-import Contact from "./components/Contact";
+import { PostsConsumer } from "@/app/contexts/PostsContext";
+import MainLayout from "@/app/layouts/MainLayout";
+import Contact from "@/app/components/Contact";
 
 export default function Home() {
   const posts = PostsConsumer();

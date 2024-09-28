@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Logo from "./components/Logo";
-import Header from "./components/Header";
-import { PostsProvider } from "./contexts/PostsContext";
+import "@/app/globals.css";
+import Logo from "@/app/components/Logo";
+import Header from "@/app/components/Header";
+import { PostsProvider } from "@/app/contexts/PostsContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",

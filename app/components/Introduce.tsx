@@ -1,6 +1,6 @@
 import Image from "next/image"
 import profile from "@/app/assets/imgs/profile.webp";
-import { contactOptions } from "../utils/constants";
+import { contactOptions } from "@/app/utils/constants";
 
 const Introduce = () => {
     return (

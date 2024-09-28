@@ -3,6 +3,7 @@ import { PostsConsumer } from "@/app/contexts/PostsContext";
 import { maxNumCardsInHomeSections } from "@/app/utils/constants";
 import useDate from "@/app/hooks/useDate";
 import Card from "@/app/components/Card";
+import { CustomLinkType } from "@/app/utils/enums";
 
 const Blog = () => {
     const posts = PostsConsumer()?.slice(0, maxNumCardsInHomeSections)
@@ -18,6 +19,8 @@ const Blog = () => {
                 posts?.map( ({slug, title, icon, readingTime, date}) => 
                     <Card
                         key={slug}
+                        type={CustomLinkType.link}
+                        href={`/blog/${slug}`}
                         icon={icon}
                         title={title}
                         subtitle={`${readingTime} minutos de lectura`}
