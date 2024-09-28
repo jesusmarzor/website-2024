@@ -17,13 +17,6 @@ const Experience = () => {
               <p className="font-semibold text-xs">
                 Sept 2024 - Actualidad
               </p>
-              <ul className="ml-8">
-                <li className="list-disc">
-                  Lorem Ipsum es simplemente el texto de relleno de las imprentas.
-                </li>
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-              </ul>
             </section>
             <section className="flex flex-col justify-center items-start gap-1 ml-4">
               <h2 className="text-md font-bold text-main mt-[.8rem]">
@@ -33,9 +26,10 @@ const Experience = () => {
                 Sept 2022 - Ag 2024
               </p>
               <ul className="ml-8">
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
+                <li className="list-disc">Desarrollo en UIKit y Swift UI con arquitectura VIPER.</li>
+                <li className="list-disc">Test unitarios con XCTest.</li>
+                <li className="list-disc">Estimación y reparto de tareas con metodología SCRUM.</li>
+                <li className="list-disc">Mantenimiento de aplicaciones en producción.</li>
               </ul>
             </section>
           </TimeLineLayout>
@@ -44,16 +38,16 @@ const Experience = () => {
             subtitle="Feb 2022 - Ag 2022 | Secrets-On, Madrid"
           >
             <ul className="ml-8">
-              <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
+              <li className="list-disc">Desarrollo de una plataforma online con React.</li>
               <li className="list-disc">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas.:
+                Recomendaciones que aporté:
                 <ul className="ml-8">
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
-                  <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
+                  <li className="list-disc">Trabajar con una metodología ágil.</li>
+                  <li className="list-disc">Usar SASS junto a Suit CSS.</li>
+                  <li className="list-disc">Una estructura de carpetas más sostenible.</li>
                 </ul>
               </li>
-              <li className="list-disc">Lorem Ipsum es simplemente el texto de relleno de las imprentas.</li>
+              <li className="list-disc">Desarrollo de una página web en Wordpress.</li>
             </ul>
           </TimeLineLayout>
         </SectionLayout>
