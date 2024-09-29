@@ -1,7 +1,7 @@
 import { contactOptions } from "@/app/utils/constants";
 import { CustomLinkType } from "@/app/utils/enums";
 import Card from "@/app/components/Card";
-import { SectionLayout } from "../layouts/Section";
+import { SectionLayout } from "@/app/layouts/Section";
 
 const Contact = () => {
     return (
