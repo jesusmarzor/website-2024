@@ -1,6 +1,7 @@
 "use client"
 import { PostsConsumer } from "@/app/contexts/PostsContext"
 import MarkdownCode from "@/app/components/MarkdownCode"
+import Loader from "@/app/components/Loader"
 
 interface Params {
     slug: string
@@ -13,7 +14,9 @@ interface props {
 const Post: React.FunctionComponent<props> = ({params})  => {
   const post = PostsConsumer()?.filter( ({slug}) => slug === params.slug)[0]
   return (
-    <section className="max-w-[768px] mx-auto overflow-hidden">
+    post == null
+    ? <Loader/>
+    : <section className="max-w-[768px] mx-auto overflow-hidden">
       {
         post &&
         <>
