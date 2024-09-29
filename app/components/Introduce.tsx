@@ -9,7 +9,7 @@ const Introduce = () => {
             <Image
               className="w-24 h-24 rounded-full object-cover"
               src={profile}
-              alt={""}
+              alt={"My profile image"}
             />
           </picture>
           <section className="flex flex-col justify-start items-start gap-1">
@@ -19,7 +19,7 @@ const Introduce = () => {
               {
                 contactOptions.map( ({url, img, name}) => (
                   <li key={name}>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" rel="noreferrer">
                       <Image width={24} height={24} src={img} alt={`${name} icon`} />
                     </a>
                   </li>

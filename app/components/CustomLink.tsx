@@ -26,6 +26,7 @@ const CustomLink: FC<props> = ({type, href, children}) => {
             href={href}
             target="_blank"
             className={classes}
+            rel="noreferrer"
         >
             {children}
         </a>
