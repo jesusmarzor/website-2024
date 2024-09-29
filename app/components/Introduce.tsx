@@ -4,7 +4,7 @@ import { contactOptions } from "@/app/utils/constants";
 
 const Introduce = () => {
     return (
-        <header className="flex justify-start items-center gap-4 my-8">
+        <header className="flex justify-start items-center gap-4 mb-8">
           <picture className="flex justify-center items-center w-28 h-28 border-4 border-main rounded-full overflow-hidden">
             <Image
               className="w-24 h-24 rounded-full object-cover"

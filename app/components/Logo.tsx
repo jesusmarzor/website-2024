@@ -3,7 +3,7 @@ import { textLogo } from "@/app/utils/constants"
 
 const Logo = () => {
     return (
-        <Link href="/" rel="preload" className="text-xl">
+        <Link href="/" rel="preload" className="text-2xl">
             <span className="font-semibold">{textLogo.name}</span>{textLogo.lastName}
         </Link>
     )

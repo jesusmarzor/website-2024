@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import Logo from "@/app/components/Logo";
 import Header from "@/app/components/Header";
 import { PostsProvider } from "@/app/contexts/PostsContext";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +24,7 @@ export default function RootLayout({
                 {children}
               </div>
             </PostsProvider>
-            <footer className="w-full bg-black-light flex flex-col gap-4 justify-center items-center py-4 px-10">
-                <Logo/>
-                <p className="text-sm">Inspirado en el proyecto de <a className="text-main" href="https://moure.dev" target="_blank">@mouredev</a></p>
-            </footer>
+            <Footer/>
         </main>
       </body>
     </html>
