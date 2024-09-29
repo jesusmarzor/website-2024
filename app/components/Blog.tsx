@@ -10,7 +10,7 @@ const Blog = () => {
     const { getDateString } = useDate()
     return (
         <SectionLayout
-            title="Últimos posts"
+            title="Últimas publicaciones"
             titleButton="Ver todos"
             hrefButton="/blog"
         >

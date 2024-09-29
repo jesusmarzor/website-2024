@@ -12,10 +12,11 @@ export default function Home() {
     <MainLayout>
       <Introduce />
       <p>
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-        archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-        las industrias desde el año 1500, cuando un impresor Lorem Ipsum es
-        simplemente el texto.
+        Soy ingeniero informático y actualmente trabajo como desarrollador de aplicaciones iOS. 
+        Destaco mi curiosidad, responsabilidad y capacidad para resolver problemas.
+      </p>
+      <p>
+        Aquí podrás encontrar mi experiencia profesional, las publicaciones de mi blog y todos mis enlaces de contacto.
       </p>
       <Experience />
       {posts !== null && posts.length > 0 && <Blog />}
