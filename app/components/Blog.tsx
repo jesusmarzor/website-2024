@@ -11,7 +11,7 @@ const Blog = () => {
     return (
         <SectionLayout
             title="Últimas publicaciones"
-            titleButton="Ver todos"
+            titleButton="Ver todas"
             hrefButton="/blog"
         >
         <div className="flex flex-col justify-center items-center gap-4">
