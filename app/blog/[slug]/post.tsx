@@ -17,7 +17,7 @@ const Post: React.FunctionComponent<props> = ({params})  => {
       {
         post &&
         <>
-          <h2 className="font-bold text-5xl text-center mb-10">{post?.title}</h2>
+          <h2 className="font-bold text-3xl text-center mb-10">{post?.title}</h2>
           <div className="prose prose-invert mx-auto">
           <MarkdownCode markdown={post.markdown}/>
           </div>
