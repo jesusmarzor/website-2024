@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="w-full flex flex-col gap-4 justify-center items-center px-10 pb-10">
       <Logo isFullName={false} />
       <div className="text-center">
-        <p className="text-sm">Web desarrollada por jesusmarzor.</p>
-        <p className="text-sm">
+        <p>Web desarrollada por jesusmarzor.</p>
+        <p>
           Diseño inspirado en el proyecto de <a
-            className="text-main"
+            className="underline underline-offset-4"
             href="https://moure.dev"
             target="_blank"
             rel="noreferrer"
