@@ -11,25 +11,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <head>
-        <meta name="robots" content="noindex"/>
-      </head>
-      <html lang="en">
-        <body className="font-myFont text-white-default bg-black-default font-light min-h-screen">
-          <main className="flex flex-col justify-between items-center min-h-screen">
-              <SpeedInsights/>
-              <Analytics/>
-              <Header/>
-              <PostsProvider>
-                <div className="py-8 px-6 mb-auto w-full">
-                  {children}
-                </div>
-              </PostsProvider>
-              <Footer/>
-          </main>
-        </body>
-      </html>
-    </>
+    <html lang="en">
+      <body className="font-myFont text-white-default bg-black-default font-light min-h-screen">
+        <main className="flex flex-col justify-between items-center min-h-screen">
+            <SpeedInsights/>
+            <Analytics/>
+            <Header/>
+            <PostsProvider>
+              <div className="py-8 px-6 mb-auto w-full">
+                {children}
+              </div>
+            </PostsProvider>
+            <Footer/>
+        </main>
+      </body>
+    </html>
   );
 }
