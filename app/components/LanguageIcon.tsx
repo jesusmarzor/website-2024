@@ -7,20 +7,20 @@ import Image from "next/image"
 
 export const LanguageIcon: React.FC = () => {
     const t = useTranslations()
-    const {isShowedModal, setIsShowedModal, languageIconRef, changeLanguage, isActiveLanguage} = LanguageModalConsumer()
+    const languageModal = LanguageModalConsumer()
     
     return(
         <div className="relative">
-            <button onClick={() => setIsShowedModal(true)}>
+            <button onClick={() => languageModal?.setIsShowedModal(true)}>
                 <Image src={languages} width={20} height={20} alt="Language icon"/>
             </button>
-            <div ref={languageIconRef} className={`absolute top-10 right-1 border border-black-extra-light bg-black-default rounded cursor-default py-2 ${!isShowedModal && "hidden"}`}>
+            <div className={`absolute top-10 right-1 border border-black-extra-light bg-black-default rounded cursor-default py-2 ${!languageModal?.isShowedModal && "hidden"}`}>
                 <ul className="flex flex-col w-32 gap-2 z-10">
                     {
                         supportedLocales.map( lang => {
                             return (
                                 <li key={lang.code}>
-                                    <button className={`hover:text-main w-full text-left pl-2 py-2 ${isActiveLanguage(lang.code) && "text-main  pointer-events-none"}`} onClick={() => changeLanguage(lang.code)} title={lang.nameKey}>{t(lang.nameKey)}</button>
+                                    <button className={`hover:text-main w-full text-left pl-2 py-2 ${languageModal?.isActiveLanguage(lang.code) && "text-main  pointer-events-none"}`} onClick={() => languageModal?.changeLanguage(lang.code)} title={lang.nameKey}>{t(lang.nameKey)}</button>
                                 </li>
                             )
                         }) 

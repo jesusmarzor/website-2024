@@ -6,10 +6,10 @@ interface props {
 }
 
 const DetectClickLayout: React.FC<props> = ({children}) => {
-    const {isShowedModal: isShowLanguageModal, setIsShowedModal: setIShowLanguageModal} = LanguageModalConsumer()
+    const languageModal = LanguageModalConsumer()
 
     const didTapMain = () => {
-        isShowLanguageModal && setIShowLanguageModal(!isShowLanguageModal)
+        languageModal?.isShowedModal && languageModal.setIsShowedModal(!languageModal?.isShowedModal)
     }
 
     return (

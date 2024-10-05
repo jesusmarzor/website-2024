@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useLocale } from "next-intl";
 import { setCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 import { supportedLocales } from "@/app/utils/constants";
+import { LanguageModal } from "../utils/interfaces";
 
-const useLanguageModal = () => {
+const useLanguageModal = (): LanguageModal => {
     const router = useRouter()
     const [isShowedModal, setIsShowedModal] = useState<boolean>(false)
-    const languageIconRef = useRef<HTMLDivElement>(null)
     const locale = useLocale()
 
     const changeLanguage = (lang: string) => {
@@ -18,7 +18,7 @@ const useLanguageModal = () => {
 
     const isActiveLanguage = (lang: string): boolean => (locale || supportedLocales[0]?.code) == lang
     
-    return {isShowedModal, setIsShowedModal, languageIconRef, changeLanguage, isActiveLanguage}
+    return {isShowedModal, setIsShowedModal, changeLanguage, isActiveLanguage}
 }
 
 export default useLanguageModal
