@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { LanguageModalProvider } from "@/app/contexts/LanguageModalContext";
-import DetectClickLayout from "./layouts/DetectClickLayout";
+import DetectClickLayout from "@/app/layouts/DetectClickLayout";
 
 export default async function RootLayout({
   children,

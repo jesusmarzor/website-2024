@@ -1,5 +1,5 @@
 import Logo from "@/app/components/Logo"
-import { LanguageIcon } from "./LanguageIcon";
+import { LanguageIcon } from "@/app/components/LanguageIcon";
 
 const Header = () => {
 

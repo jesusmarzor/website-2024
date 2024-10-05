@@ -1,6 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 import { cookies, headers } from 'next/headers';
-import { defaultLocale, supportedLocales } from '../utils/constants';
+import { defaultLocale, supportedLocales } from '@/app/utils/constants';
  
 export default getRequestConfig(async () => {
   const browserLang = headers().get("Accept-Language")?.split(',')[0].split('-')[0]

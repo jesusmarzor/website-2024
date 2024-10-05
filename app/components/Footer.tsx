@@ -1,6 +1,6 @@
 import Logo from "@/app/components/Logo";
 import { useTranslations } from "next-intl";
-import { textLogo } from "../utils/constants";
+import { textLogo } from "@/app/utils/constants";
 
 const Footer = () => {
   const t = useTranslations()
