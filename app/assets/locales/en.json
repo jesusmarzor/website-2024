@@ -21,10 +21,10 @@
             },
             "secondJob": {
                 "name": "iOS app developer",
-                "time": "Sept 2022 - Present | Deloitte, Madrid",
+                "time": "Sep 2022 - Present | Deloitte, Madrid",
                 "firstCategory": {
                     "name": "Junior software developer",
-                    "time": "Sept 2022 - Aug 2024",
+                    "time": "Sep 2022 - Aug 2024",
                     "tasks": {
                         "task1": "Developed using UIKit and SwiftUI with VIPER architecture.",
                         "task2": "Wrote unit tests with XCTest.",
@@ -34,7 +34,7 @@
                 },
                 "secondCategory": {
                     "name": "Mid software developer",
-                    "time": "Sept 2024 - Present"
+                    "time": "Sep 2024 - Present"
                 }
             }
         }
@@ -47,6 +47,9 @@
         "experience": "Experience",
         "lastPosts": "Latest posts",
         "seeAll": "See all",
-        "contact": "Contact"
+        "contact": "Contact",
+        "spanish": "Spanish",
+        "english": "English",
+        "minOfReadingTime": "{0} minutes of reading time"
     }
 }

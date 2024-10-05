@@ -6,10 +6,11 @@ export default getRequestConfig(async () => {
   const browserLang = headers().get("Accept-Language")?.split(',')[0].split('-')[0]
   const cookieLang = cookies().get("lang")?.value
   let locale = defaultLocale;
+  const supportedLanguages = supportedLocales.map( ({code}) => code)
 
-  if (cookieLang && supportedLocales.includes(cookieLang)) {
+  if (cookieLang && supportedLanguages.includes(cookieLang)) {
     locale = cookieLang
-  } else if (browserLang && supportedLocales.includes(browserLang)) {
+  } else if (browserLang && supportedLanguages.includes(browserLang)) {
     locale = browserLang;
   }
  

@@ -17,3 +17,8 @@ export interface ContactOption {
     name: string
     description: string
 }
+
+export interface Language {
+    nameKey: string
+    code: string
+}

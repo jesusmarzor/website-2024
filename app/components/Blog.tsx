@@ -25,7 +25,7 @@ const Blog = () => {
                         href={`/blog/${slug}`}
                         icon={icon}
                         title={title}
-                        subtitle={`${readingTime} minutos de lectura`}
+                        subtitle={t("common.minOfReadingTime", { 0: readingTime})}
                         rightText={getDateString(date)}
                     />
                 )

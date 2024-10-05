@@ -18,7 +18,7 @@ const usePosts = () => {
             const posts = res.data?.filter( ({date}) => isShowedPost(date)) as Post[]
             setPosts(posts ?? [])
         })
-    }, [])
+    }, [locale])
     return posts
 }
 

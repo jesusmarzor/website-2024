@@ -47,6 +47,9 @@
         "experience": "Experiencia",
         "lastPosts": "Últimas publicaciones",
         "seeAll": "Ver todas",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "spanish": "Español",
+        "english": "Inglés",
+        "minOfReadingTime": "{0} minutos de lectura"
     }
 }

@@ -6,9 +6,11 @@ import Card from "@/app/components/Card";
 import { CustomLinkType } from "@/app/utils/enums";
 import { authorName, textLogo } from "@/app/utils/constants";
 import Loader from "@/app/components/Loader";
+import { useTranslations } from "next-intl";
 
 const Blog = () => {
     const posts = PostsConsumer()
+    const t = useTranslations()
     const { getDateString } = useDate()
     return (
         <>
@@ -36,7 +38,7 @@ const Blog = () => {
                                 href={`/blog/${slug}`}
                                 icon={icon}
                                 title={title}
-                                subtitle={`${readingTime} minutos de lectura`}
+                                subtitle={t("common.minOfReadingTime", { 0: readingTime})}
                                 rightText={getDateString(date)}
                             />
                         )

@@ -1,4 +1,5 @@
 import { minDaysNewLabel } from "@/app/utils/constants";
+import { useLocale } from "next-intl";
 
 export const useDate = () => {
 
@@ -8,7 +9,7 @@ export const useDate = () => {
 
     const getDateString = (dateString: string): string => {
         const options: Intl.DateTimeFormatOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-        return getDateFromString(dateString).toLocaleDateString("es", options)
+        return getDateFromString(dateString).toLocaleDateString(useLocale(), options)
     }
 
     const isShowedNew = (dateString: string): boolean => {
