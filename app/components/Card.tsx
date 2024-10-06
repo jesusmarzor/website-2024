@@ -104,7 +104,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
           >
             {
               isShowedNew &&
-              <p className="absolute py-1 px-2 top-2 right-0 text-xs bg-main rounded-tl-full rounded-bl-full font-bold text-black-default">{t("common.new")}</p>
+              <p className="absolute py-1 px-2 top-2 right-0 text-xs bg-main rounded-tl-full rounded-bl-full font-bold text-black-default">{t("common.new").toUpperCase()}</p>
             }
             <Image
               className="object-cover rounded-xl"
