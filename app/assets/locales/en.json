@@ -50,6 +50,7 @@
         "contact": "Contact",
         "spanish": "Spanish",
         "english": "English",
-        "minOfReadingTime": "{0} minutes of reading time"
+        "minOfReadingTime": "{0} minutes of reading time",
+        "new": "New"
     }
 }
