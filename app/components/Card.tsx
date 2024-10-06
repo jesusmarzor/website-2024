@@ -78,7 +78,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
         className="w-full"
       >
         <div
-          className={`w-full relative p-[1px] rounded-2xl cursor-pointer bg-gradient-to-br from-[rgba(255,254,241,0.15)] to-[rgba(255,254,241,0.08)]`}
+          className={`w-full relative p-[1px] rounded-2xl bg-gradient-to-br from-[rgba(255,254,241,0.15)] to-[rgba(255,254,241,0.08)]`}
           style={
             {
               "--cursor-y": `${mousePosition.y}px`,
