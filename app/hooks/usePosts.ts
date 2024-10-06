@@ -13,7 +13,7 @@ const usePosts = () => {
         .from('Posts')
         .select()
         .eq("lang", locale)
-        .lte("created_at", new Date().toISOString())
+        .lte("date", new Date().toISOString())
         .order("date", {ascending: false})
         .then( res => {
             const posts = res.data?.filter( ({date}) => isShowedPost(date)) as Post[]

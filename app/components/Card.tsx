@@ -46,9 +46,10 @@ interface props {
     title: string
     subtitle: string
     rightText?: string
+    isShowedNew?: boolean
 }
 
-const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightText = null}) => {
+const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightText = null, isShowedNew = false}) => {
     const [showGradient, setShowGradient] = useState(false);
     const [mousePosition, setMousePosition] = useState<MousePosition>({});
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -97,7 +98,12 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
           <CustomLink
             type={type}
             href={href}
+            classes={`${isShowedNew && "relative"} z-20 overflow-hidden flex justify-start items-center gap-4 w-full relative bg-black-80 rounded-2xl p-4 select-none leading-6 cursor-default`}
           >
+            {
+              isShowedNew &&
+              <p className="absolute py-1 px-2 top-2 right-0 text-xs bg-main rounded-tl-full rounded-bl-full font-bold text-black-default">NEW</p>
+            }
             <Image
               className="object-cover rounded-xl"
               src={icon ?? ""}
@@ -106,7 +112,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
               height={48}
             />
             <section className="flex flex-col justify-center items-start gap-1 w-full">
-              <h3 className="font-semibold">{title}</h3>
+              <h3 className="font-semibold pr-10">{title}</h3>
               <div className="flex justify-between items-center gap-2 flex-wrap w-full text-xs">
                 <p className="">{subtitle}</p>
                 { 

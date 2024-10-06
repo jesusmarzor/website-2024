@@ -12,7 +12,7 @@ export const LanguageIcon: React.FC = () => {
     return(
         <div className="relative">
             <button onClick={() => languageModal?.setIsShowedModal(true)}>
-                <Image src={languages} width={32} height={32} alt="Language icon"/>
+                <Image src={languages} width={30} height={30} alt="Language icon"/>
             </button>
             <ul className={`flex flex-col w-32 gap-2 z-30 absolute top-10 right-1 border border-black-extra-light bg-black-default rounded py-2 ${!languageModal?.isShowedModal && "hidden"}`}>
                 {

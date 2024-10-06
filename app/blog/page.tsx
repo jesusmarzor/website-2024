@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 const Blog = () => {
     const posts = PostsConsumer()
     const t = useTranslations()
-    const { getDateString } = useDate()
+    const { getDateString, isShowedNew } = useDate()
     return (
         <>
         <title>{`Blog - ${textLogo.name}${textLogo.lastName}`}</title>
@@ -40,6 +40,7 @@ const Blog = () => {
                                 title={title}
                                 subtitle={t("common.minOfReadingTime", { 0: readingTime})}
                                 rightText={getDateString(date)}
+                                isShowedNew={isShowedNew(date)}
                             />
                         )
                     }

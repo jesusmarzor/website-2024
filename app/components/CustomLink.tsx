@@ -6,9 +6,9 @@ interface props {
     type: CustomLinkType
     href: string
     children: React.ReactNode
+    classes: string
 }
-const CustomLink: FC<props> = ({type, href, children}) => {
-    const classes = "z-20 overflow-hidden flex justify-start items-center gap-4 w-full relative bg-black-80 rounded-2xl p-4 select-none leading-6 cursor-default"
+const CustomLink: FC<props> = ({type, href, classes, children}) => {
     switch (type) {
     case CustomLinkType.link:
         return (
