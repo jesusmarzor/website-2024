@@ -12,21 +12,19 @@ export const LanguageIcon: React.FC = () => {
     return(
         <div className="relative">
             <button onClick={() => languageModal?.setIsShowedModal(true)}>
-                <Image src={languages} width={24} height={24} alt="Language icon"/>
+                <Image src={languages} width={32} height={32} alt="Language icon"/>
             </button>
-            <div className={`absolute top-10 right-1 border border-black-extra-light bg-black-default rounded cursor-default py-2 ${!languageModal?.isShowedModal && "hidden"}`}>
-                <ul className="flex flex-col w-32 gap-2 z-10">
-                    {
-                        supportedLocales.map( lang => {
-                            return (
-                                <li key={lang.code}>
-                                    <button className={`hover:text-main w-full text-left pl-2 py-2 ${languageModal?.isActiveLanguage(lang.code) && "text-main  pointer-events-none"}`} onClick={() => languageModal?.changeLanguage(lang.code)} title={lang.nameKey}>{t(lang.nameKey)}</button>
-                                </li>
-                            )
-                        }) 
-                    }
-                </ul>
-            </div>
+            <ul className={`flex flex-col w-32 gap-2 z-30 absolute top-10 right-1 border border-black-extra-light bg-black-default rounded cursor-default py-2 ${!languageModal?.isShowedModal && "hidden"}`}>
+                {
+                    supportedLocales.map( lang => {
+                        return (
+                            <li key={lang.code}>
+                                <button className={`hover:text-main w-full text-left pl-2 py-2 ${languageModal?.isActiveLanguage(lang.code) && "text-main  pointer-events-none"}`} onClick={() => languageModal?.changeLanguage(lang.code)} title={lang.nameKey}>{t(lang.nameKey)}</button>
+                            </li>
+                        )
+                    }) 
+                }
+            </ul>
         </div>
     )
 }

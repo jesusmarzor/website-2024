@@ -88,7 +88,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
           }
         >
           <div
-            className="absolute inset-0 z-1 rounded-2xl transition-opacity duration-300 ease-out"
+            className="absolute inset-0 z-10 rounded-2xl transition-opacity duration-300 ease-out"
             style={{
               backgroundImage: `radial-gradient(400px at var(--cursor-x) var(--cursor-y), rgba(255,254,241,0.35), transparent 40%)`,
               opacity: showGradient ? 1 : 0,
