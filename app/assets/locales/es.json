@@ -1,0 +1,55 @@
+{
+    "home": {
+        "description": {
+            "p1": "Soy ingeniero informático y actualmente trabajo como desarrollador de aplicaciones iOS. Destaco mi curiosidad, responsabilidad y capacidad para resolver problemas.",
+            "p2": "Aquí podrás encontrar mi experiencia profesional, las publicaciones de mi blog y todos mis enlaces de contacto."
+        },
+        "experience": {
+            "firstJob": {
+                "name": "Desarrollador web",
+                "time": "Feb 2022 - Ag 2022 | Secrets-On, Madrid",
+                "tasks": {
+                    "task1": "Desarrollo de una plataforma online con React.",
+                    "task2": {
+                        "name": "Recomendaciones que aporté:",
+                        "subtask1": "Trabajar con una metodología ágil.",
+                        "subtask2": "Usar SASS junto a Suit CSS.",
+                        "subtask3": "Una estructura de carpetas más sostenible."
+                    },
+                    "task3": "Desarrollo de una página web en Wordpress."
+                }
+            },
+            "secondJob": {
+                "name": "Desarrollador de aplicaciones iOS",
+                "time": "Sept 2022 - Actualidad | Deloitte, Madrid",
+                "firstCategory": {
+                    "name": "Junior | Desarrollador de aplicaciónes",
+                    "time": "Sept 2022 - Ag 2024",
+                    "tasks": {
+                        "task1": "Desarrollo en UIKit y Swift UI con arquitectura VIPER.",
+                        "task2": "Test unitarios con XCTest.",
+                        "task3": "Estimación y reparto de tareas con metodología SCRUM.",
+                        "task4": "Mantenimiento de aplicaciones en producción."
+                    }
+                },
+                "secondCategory": {
+                    "name": "Mid | Desarrollador de aplicaciónes",
+                    "time": "Sept 2024 - Actualidad"
+                }
+            }
+        }
+    },
+    "footer": {
+        "p1": "Web desarrollada por {0}.",
+        "p2": "Diseño inspirado en el proyecto de <link>{0}</link>."
+    },
+    "common": {
+        "experience": "Experiencia",
+        "lastPosts": "Últimas publicaciones",
+        "seeAll": "Ver todas",
+        "contact": "Contacto",
+        "spanish": "Español",
+        "english": "Inglés",
+        "minOfReadingTime": "{0} minutos de lectura"
+    }
+}

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import profile from "@/app/assets/imgs/profile.webp";
-import { contactOptions } from "@/app/utils/constants";
+import { authorName, contactOptions, textLogo } from "@/app/utils/constants";
 
 const Introduce = () => {
     return (
@@ -13,8 +13,8 @@ const Introduce = () => {
             />
           </picture>
           <section className="flex flex-col justify-start items-start gap-1">
-            <h2 className="text-2xl">Jesús Martín</h2>
-            <p className=" text-main">@jesusmarzor</p>
+            <h2 className="text-2xl">{authorName}</h2>
+            <p className=" text-main">@{textLogo.name.toLowerCase()}{textLogo.lastName.toLowerCase()}</p>
             <ul className="flex justify-center items-center gap-8 mt-2">
               {
                 contactOptions.map( ({url, img, name}) => (

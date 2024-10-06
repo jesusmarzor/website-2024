@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface Post {
     id: number
     slug: string
@@ -16,4 +18,16 @@ export interface ContactOption {
     img: string
     name: string
     description: string
+}
+
+export interface Language {
+    nameKey: string
+    code: string
+}
+
+export interface LanguageModal {
+    isShowedModal: boolean
+    setIsShowedModal: Dispatch<SetStateAction<boolean>>
+    changeLanguage: (lang: string) => void
+    isActiveLanguage: (lang: string) => boolean
 }
