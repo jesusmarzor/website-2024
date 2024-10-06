@@ -6,8 +6,10 @@ import { PostsConsumer } from "@/app/contexts/PostsContext";
 import MainLayout from "@/app/layouts/MainLayout";
 import Contact from "@/app/components/Contact";
 import { authorName, textLogo } from "@/app/utils/constants";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+  const t  = useTranslations();
   const posts = PostsConsumer();
   return (
     <>
@@ -24,11 +26,14 @@ export default function Home() {
     <MainLayout>
       <Introduce />
       <p>
-        Soy ingeniero informático y actualmente trabajo como desarrollador de aplicaciones iOS. 
-        Destaco mi curiosidad, responsabilidad y capacidad para resolver problemas.
+        {
+          t("home.description.p1")
+        }
       </p>
       <p>
-        Aquí podrás encontrar mi experiencia profesional, las publicaciones de mi blog y todos mis enlaces de contacto.
+        {
+          t("home.description.p2")
+        }
       </p>
       <Experience />
       {posts !== null && posts.length > 0 && <Blog />}
