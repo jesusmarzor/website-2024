@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import CustomLink from "@/app/components/CustomLink";
 import { CustomLinkType } from "@/app/utils/enums";
+import { useTranslations } from "next-intl";
 
 interface MousePosition {
   x?: number;
@@ -53,6 +54,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
     const [showGradient, setShowGradient] = useState(false);
     const [mousePosition, setMousePosition] = useState<MousePosition>({});
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const t = useTranslations()
   
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
       if (containerRef.current) {
@@ -102,7 +104,7 @@ const Card: React.FC<props> = ({type, href, icon = null, title, subtitle, rightT
           >
             {
               isShowedNew &&
-              <p className="absolute py-1 px-2 top-2 right-0 text-xs bg-main rounded-tl-full rounded-bl-full font-bold text-black-default">NEW</p>
+              <p className="absolute py-1 px-2 top-2 right-0 text-xs bg-main rounded-tl-full rounded-bl-full font-bold text-black-default">{t("common.new").toUpperCase()}</p>
             }
             <Image
               className="object-cover rounded-xl"
