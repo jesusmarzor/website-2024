@@ -1,34 +1,46 @@
-import Image from "next/image"
+import Image from "next/image";
 import profile from "@/app/assets/imgs/profile.webp";
 import { authorName, contactOptions, textLogo } from "@/app/utils/constants";
+import { useTranslations } from "next-intl";
 
 const Introduce = () => {
-    return (
-        <header className="flex justify-start items-center gap-4 mb-8">
-          <picture className="flex justify-center items-center w-28 h-28 border-4 border-main rounded-full overflow-hidden">
-            <Image
-              className="w-24 h-24 rounded-full object-cover"
-              src={profile}
-              alt={"My profile image"}
-            />
-          </picture>
-          <section className="flex flex-col justify-start items-start gap-1">
-            <h2 className="text-2xl">{authorName}</h2>
-            <p className=" text-main">@{textLogo.name.toLowerCase()}{textLogo.lastName.toLowerCase()}</p>
-            <ul className="flex justify-center items-center gap-8 mt-2">
-              {
-                contactOptions.map( ({url, img, name}) => (
-                  <li key={name}>
-                    <a href={url} target="_blank" rel="noreferrer">
-                      <Image width={24} height={24} src={img} alt={`${name} icon`} />
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </section>
-        </header>
-    )
-}
+  const t = useTranslations();
+  return (
+    <>
+      <header className="flex justify-start items-center gap-4 mb-8">
+        <picture className="flex justify-center items-center w-28 h-28 border-4 border-main rounded-full overflow-hidden">
+          <Image
+            className="w-24 h-24 rounded-full object-cover"
+            src={profile}
+            alt={"My profile image"}
+          />
+        </picture>
+        <section className="flex flex-col justify-start items-start gap-1">
+          <h2 className="text-2xl">{authorName}</h2>
+          <p className=" text-main">
+            @{textLogo.name.toLowerCase()}
+            {textLogo.lastName.toLowerCase()}
+          </p>
+          <ul className="flex justify-center items-center gap-8 mt-2">
+            {contactOptions.map(({ url, img, name }) => (
+              <li key={name}>
+                <a href={url} target="_blank" rel="noreferrer">
+                  <Image
+                    width={24}
+                    height={24}
+                    src={img}
+                    alt={`${name} icon`}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </header>
+      <p>{t("home.description.p1")}</p>
+      <p className="mt-2">{t("home.description.p2")}</p>
+    </>
+  );
+};
 
-export default Introduce
+export default Introduce;
