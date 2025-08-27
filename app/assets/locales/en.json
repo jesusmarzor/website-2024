@@ -1,40 +1,27 @@
 {
     "home": {
         "description": {
-            "p1": "I am a computer engineer currently working as an iOS application developer. I emphasize my curiosity, responsibility, and problem-solving skills.",
+            "p1": "Experienced professional in application development and digital project management. I lead a development team, coordinating client deliveries, supervising team tasks, and ensuring top-quality results in every project.",
             "p2": "Here, you can find my professional experience, blog posts, and all my contact links."
         },
         "experience": {
             "firstJob": {
                 "name": "Fontend web developer",
                 "time": "Feb 2022 - Aug 2022 | Secrets-On, Madrid",
-                "tasks": {
-                    "task1": "Developed an online platform using React.",
-                    "task2": {
-                        "name": "Recommendations I provided:",
-                        "subtask1": "Adopting agile methodology.",
-                        "subtask2": "Using SASS alongside Suit CSS.",
-                        "subtask3": "Implementing a more sustainable folder structure."
-                    },
-                    "task3": "Developed a website using WordPress."
-                }
+                "description": "Developed an online platform using React and a WordPress website. Implemented project improvements by adopting agile methodologies, utilizing SASS with SUIT CSS, and creating a more scalable and maintainable folder structure."
             },
             "secondJob": {
-                "name": "iOS app developer",
+                "name": "IT Consultant",
                 "time": "Sep 2022 - Present | Deloitte, Madrid",
                 "firstCategory": {
-                    "name": "Junior software developer",
+                    "name": "IT Analyst",
                     "time": "Sep 2022 - Aug 2024",
-                    "tasks": {
-                        "task1": "Developed using UIKit and SwiftUI with VIPER architecture.",
-                        "task2": "Wrote unit tests with XCTest.",
-                        "task3": "Task estimation and distribution using SCRUM methodology.",
-                        "task4": "Maintained applications in production."
-                    }
+                    "description": "Designed and developed mobile applications using UIKit and SwiftUI under the VIPER architecture, including unit testing with XCTest. Actively participated in Agile SCRUM processes for task estimation and task assignment. Maintained production applications, developed customizable SDKs, and integrated Angular SPAs as webviews."
                 },
                 "secondCategory": {
-                    "name": "Mid software developer",
-                    "time": "Sep 2024 - Present"
+                    "name": "IT Consultant",
+                    "time": "Sep 2024 - Present",
+                    "description": "Managed and coordinated tasks across multiple client projects, leading a development team and supervising technical reviews of deliverables. Expanded expertise in AWS and Angular to optimize project workflows and boost team efficiency."
                 }
             }
         }
