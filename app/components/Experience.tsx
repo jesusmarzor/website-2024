@@ -19,6 +19,9 @@ const Experience = () => {
               <p className="font-semibold text-sm">
                 {t("home.experience.secondJob.secondCategory.time")}
               </p>
+              <p className="mt-2">
+                {t("home.experience.secondJob.secondCategory.description")}
+              </p>
             </section>
             <section className="flex flex-col justify-center items-start gap-1 ml-4">
               <h2 className="font-bold text-main mt-[.8rem]">
@@ -27,30 +30,18 @@ const Experience = () => {
               <p className="font-semibold text-sm">
                 {t("home.experience.secondJob.firstCategory.time")}
               </p>
-              <ul className="ml-8 mt-2">
-                <li className="list-disc">{t("home.experience.secondJob.firstCategory.tasks.task1")}</li>
-                <li className="list-disc">{t("home.experience.secondJob.firstCategory.tasks.task2")}</li>
-                <li className="list-disc">{t("home.experience.secondJob.firstCategory.tasks.task3")}</li>
-                <li className="list-disc">{t("home.experience.secondJob.firstCategory.tasks.task4")}</li>
-              </ul>
+              <p className="mt-2">
+                {t("home.experience.secondJob.firstCategory.description")}
+              </p>
             </section>
           </TimeLineLayout>
           <TimeLineLayout
             title={t("home.experience.firstJob.name")}
             subtitle={t("home.experience.firstJob.time")}
           >
-            <ul className="ml-8 mt-2">
-              <li className="list-disc">{t("home.experience.firstJob.tasks.task1")}</li>
-              <li className="list-disc">
-                {t("home.experience.firstJob.tasks.task2.name")}
-                <ul className="ml-8">
-                  <li className="list-disc">{t("home.experience.firstJob.tasks.task2.subtask1")}</li>
-                  <li className="list-disc">{t("home.experience.firstJob.tasks.task2.subtask2")}</li>
-                  <li className="list-disc">{t("home.experience.firstJob.tasks.task2.subtask3")}</li>
-                </ul>
-              </li>
-              <li className="list-disc">{t("home.experience.firstJob.tasks.task3")}</li>
-            </ul>
+            <p className="mt-2">
+              {t("home.experience.firstJob.description")}
+            </p>
           </TimeLineLayout>
         </SectionLayout>
     )
